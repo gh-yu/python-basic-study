@@ -72,3 +72,13 @@ print('"you"') # "you"
 print("""'you'""") # 'you'
 print('\\you\\\n\n\n\n') # \you\
 print('\t\t\ttest') #                         test
+
+# file 옵션 사용
+import sys
+
+f = open('console.log', 'a')  # 로그를 저장할 파일 open 
+sys.stdout = f
+print('GeeksForGeeks', file=sys.stdout)
+
+sys.stdout = sys.__stdout__   # 원래의 stdout으로 복구
+f.close() # 로그 파일 닫기
