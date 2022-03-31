@@ -161,4 +161,9 @@ func_final(10, 10, lambda_mul_10)
 func_final(10, 10, lambda x : x * 5000) 
 
 
+ # 추가 학습
  
+def ex(n, kwargs=3):
+    print(n, kwargs)
+    
+ex(1)   
